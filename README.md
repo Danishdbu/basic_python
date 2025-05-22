@@ -33,10 +33,13 @@ Age in 10 years: 35, Adult: True
 - **Tip**: Use descriptive variable names (e.g., `user_age` instead of `x`).
 - **Pitfall**: `input()` returns a string; convert to `int` or `float` for numeric operations (e.g., `int(input("Enter age: "))`).
 
-### Quiz
-1. What is the data type of `3.14`?
-2. What will `print(5 + "3")` cause?
-3. How do you convert a user’s input string to an integer?
+### Important Questions and Answers
+1. **What are the basic data types in Python?**  
+   Python’s basic data types include integers (`int`), floating-point numbers (`float`), strings (`str`), and booleans (`bool`).
+2. **How does `print(f"Hello, {name}")` work?**  
+   It uses an f-string to embed the value of `name` directly into the string for formatted output.
+3. **Why is type conversion necessary for `input()`?**  
+   `input()` returns a string, so conversion (e.g., `int()` or `float()`) is needed for numeric operations to avoid type errors.
 
 ## 2. Control Flow
 ### Explanation
@@ -92,10 +95,13 @@ If-Else Flow:
 - **Tip**: Use `break` to exit loops early, `continue` to skip iterations.
 - **Pitfall**: Infinite `while` loops occur if the condition never becomes `False`.
 
-### Quiz
-1. What does `elif` stand for?
-2. How many times will `for i in range(5):` loop?
-3. What happens if a `while` loop’s condition is always `True`?
+### Important Questions and Answers
+1. **What is the difference between `for` and `while` loops?**  
+   A `for` loop iterates over a sequence (e.g., list, range), while a `while` loop runs as long as a condition is `True`.
+2. **When is `elif` used?**  
+   `elif` is used to check additional conditions after an `if` statement when multiple mutually exclusive conditions exist.
+3. **How can you prevent an infinite loop?**  
+   Ensure the `while` loop’s condition eventually becomes `False`, often by updating a counter or flag.
 
 ## 3. Functions
 ### Explanation
@@ -128,10 +134,13 @@ Hi, Bob!
 - **Tip**: Use default parameters for optional arguments.
 - **Pitfall**: Forgetting `return` results in `None` as the function’s output.
 
-### Quiz
-1. What is the purpose of the `return` statement?
-2. What is the output of `greet("Eve", "Hey")` in the example?
-3. Can a function have multiple `return` statements?
+### Important Questions and Answers
+1. **What is a default parameter in a function?**  
+   A default parameter has a predefined value (e.g., `greeting="Hello"`) used if no argument is provided.
+2. **How does `return` affect a function?**  
+   `return` sends a value back to the caller and exits the function; without it, the function returns `None`.
+3. **Can a function have no parameters?**  
+   Yes, a function can be defined without parameters, e.g., `def say_hello(): print("Hello!")`.
 
 ## 4. Data Structures
 ### Explanation
@@ -181,10 +190,13 @@ Dict: {name:Alice, age:25}
 - **Tip**: Use `list.copy()` to avoid modifying the original list when copying.
 - **Pitfall**: Tuples are immutable; attempting to change them raises an error.
 
-### Quiz
-1. How do you add an item to a list?
-2. What makes a set different from a list?
-3. How do you access a dictionary value using a key?
+### Important Questions and Answers
+1. **What is the key difference between a list and a tuple?**  
+   Lists are mutable (can be changed), while tuples are immutable (cannot be changed after creation).
+2. **How does a set ensure uniqueness?**  
+   Sets automatically remove duplicates by storing only unique elements, using hashing internally.
+3. **How do you update a dictionary value?**  
+   Assign a new value to an existing key, e.g., `student["age"] = 26`.
 
 ## 5. Object-Oriented Programming (OOP)
 ### Explanation
@@ -261,10 +273,13 @@ Puppy (inherits Dog)
 - **Pitfall**: Overriding a method without calling the parent’s method (use `super()`) can break inheritance logic.
 - **Detail**: `__init__` is not a constructor but an initializer; the object is created before `__init__` is called.
 
-### Quiz
-1. What is the difference between a class and an object?
-2. How does `Puppy` inherit from `Dog` in the example?
-3. What is encapsulation, and how is it shown in the `Dog` class?
+### Important Questions and Answers
+1. **What is the role of `__init__` in a class?**  
+   `__init__` initializes an object’s attributes when it is created, setting up its initial state.
+2. **How does inheritance work in Python?**  
+   A child class inherits attributes and methods from a parent class, allowing code reuse and extension (e.g., `Puppy(Dog)`).
+3. **What is polymorphism, and how is it shown in the example?**  
+   Polymorphism allows different classes to define methods with the same name but different behaviors; `Puppy` overrides `Dog`’s `bark()` method.
 
 ## 6. File Handling
 ### Explanation
@@ -291,10 +306,13 @@ Hello, Python!
 - **Tip**: Use `with` to automatically close files.
 - **Pitfall**: Forgetting to specify the file mode defaults to read (`r`), which fails if the file doesn’t exist.
 
-### Quiz
-1. What does the `with` statement do in file handling?
-2. What mode is used to append to a file?
-3. What happens if you try to read a non-existent file in `r` mode?
+### Important Questions and Answers
+1. **What does the `with` statement do in file handling?**  
+   The `with` statement ensures the file is properly closed after operations, even if an error occurs.
+2. **What is the difference between `w` and `a` modes?**  
+   `w` overwrites the file if it exists, while `a` appends to the existing content.
+3. **How can you read a file line by line?**  
+   Use `file.readlines()` or iterate with `for line in file:` to read lines individually.
 
 ## 7. Error Handling
 ### Explanation
@@ -325,10 +343,13 @@ Execution complete.
 - **Tip**: Catch specific exceptions instead of a general `except`.
 - **Pitfall**: Overusing `try-except` can hide bugs; use it only for expected errors.
 
-### Quiz
-1. What is the purpose of the `finally` block?
-2. What exception is raised when dividing by zero?
-3. When is the `else` block executed in a `try-except` structure?
+### Important Questions and Answers
+1. **What is an exception in Python?**  
+   An exception is an error that occurs during program execution, which can be caught and handled.
+2. **When is the `finally` block executed?**  
+   The `finally` block always executes, regardless of whether an exception occurs or not.
+3. **Why is catching specific exceptions better than a general `except`?**  
+   Specific exceptions (e.g., `ValueError`) allow precise error handling and avoid masking unexpected errors.
 
 ## 8. Modules & Packages
 ### Explanation
@@ -361,10 +382,13 @@ Hello, Alice!
 - **Tip**: Use `import as` for shorter names (e.g., `import numpy as np`).
 - **Pitfall**: Circular imports (two modules importing each other) cause errors.
 
-### Quiz
-1. How do you import a specific function from a module?
-2. What is a package in Python?
-3. What happens if you import a non-existent module?
+### Important Questions and Answers
+1. **What is a module in Python?**  
+   A module is a Python file containing functions, classes, or variables that can be imported and reused.
+2. **How do you import a specific function from a module?**  
+   Use `from module import function`, e.g., `from math import sqrt`.
+3. **What is a package, and how is it structured?**  
+   A package is a directory containing modules and a `__init__.py` file, organizing related code.
 
 ## 9. Advanced Topics
 ### Explanation
@@ -421,7 +445,10 @@ After function
 - **Tip**: Use generators for memory-efficient iteration over large datasets.
 - **Pitfall**: Lambda functions are limited to single expressions; avoid complex logic.
 
-### Quiz
-1. What does a decorator do to a function?
-2. What keyword is used in a generator to produce values?
-3. Write a list comprehension to create a list of even numbers from 1 to 10.
+### Important Questions and Answers
+1. **How does a decorator enhance a function?**  
+   A decorator wraps a function to add functionality (e.g., logging, timing) before or after its execution.
+2. **What is the benefit of using a generator?**  
+   Generators yield values one at a time, saving memory compared to storing an entire sequence.
+3. **When should you use a list comprehension?**  
+   Use list comprehensions for concise creation of lists from iterables when the transformation is simple.
